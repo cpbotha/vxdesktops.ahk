@@ -1,6 +1,10 @@
-;; followed tips by lexikos in this comment https://www.autohotkey.com/boards/viewtopic.php?p=293750#p293750
-;; who linked to an example by geek and an improved version by tic
-;; I took tic's version and then:
+; This is a pretty neat AHK example of displaying text in the systray icon by
+; dynamically generating the required ICO. After some updates, this works on
+; Windows 11. I'm using it as part of the vxdesktops.ahk Windows 1x virtual
+; desktop switching utility.
+
+;; I followed the advice of lexikos in this comment https://www.autohotkey.com/boards/viewtopic.php?p=293750#p293750
+;; who linked to an example by geek and an improved version by tic. I took tic's version and then:
 ;; - removed NoTrayIcon: with that active, the icon painting does not work at all
 ;; - cleaned up the code
 ;; - converted labels to funcs so that code can be #include'd

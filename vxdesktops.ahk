@@ -1,3 +1,5 @@
+;; AutoHotkey script for fast switching between Windows 10/11 desktops using hotkeys
+
 ;; NOTE:
 ; - if you have different wallpapers on different desktops (happens with bing
 ;   wallpapers) you'll get heavy flashing when switching. if wallpapers are the
