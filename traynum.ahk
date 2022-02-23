@@ -1,5 +1,6 @@
 ;; followed tips by lexikos in this comment https://www.autohotkey.com/boards/viewtopic.php?p=293750#p293750
-;; and then:
+;; who linked to an example by geek and an improved version by tic
+;; I took tic's version and then:
 ;; - removed NoTrayIcon: with that active, the icon painting does not work at all
 ;; - cleaned up the code
 ;; - converted labels to funcs so that code can be #include'd
