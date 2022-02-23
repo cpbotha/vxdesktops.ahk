@@ -1,6 +1,6 @@
-[submodule ".\\AHKv2-Gdip\\"]
-	path = .\\AHKv2-Gdip\\
+[submodule "AHKv2-Gdip"]
+	path = AHKv2-Gdip
 	url = https://github.com/mmikeww/AHKv2-Gdip.git
-[submodule ".\\VD.ahk\\"]
-	path = .\\VD.ahk\\
+[submodule "VD.ahk"]
+	path = VD.ahk
 	url = https://github.com/FuPeiJiang/VD.ahk
