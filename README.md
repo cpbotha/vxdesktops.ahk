@@ -31,13 +31,13 @@ You can switch to desktop 1 to 7 with the hotkey `RightAlt + NUM`.
 ### Why is switching desktops so slow?
 
 Thanks to [the VD.ahk library](https://github.com/FuPeiJiang/VD.ahk), desktops
-are switched using the Windows 10 / 11 API calls, which is usually almost
+are switched using the Windows 10 / 11 API calls, and so this is usually almost
 instantaneous.
 
-However, if you have different wallpaper images on your virtual desktops, this
-can slow down switching significantly.
+However, if you have different wallpaper images on your virtual desktops, it can
+slow down switching significantly.
 
-So for best performance, please ensure you have the same wallpaper image on all
+For best performance, please ensure you have the same wallpaper image on all
 desktops.
 
 For more background, see [this forum
