@@ -51,12 +51,15 @@ goToDesktopAndUpdateDisp(desktopNum) {
     displayCurrentDesktop()
 }
 
-; I used to have LWin & ... but that would often not trigger, or interfere with
-; the built-in Windows taskbar app shortcuts. RAlt so far is much more reliable.
-RAlt & 1::goToDesktopAndUpdateDisp(1)
-RAlt & 2::goToDesktopAndUpdateDisp(2)
-RAlt & 3::goToDesktopAndUpdateDisp(3)
-RAlt & 4::goToDesktopAndUpdateDisp(4)
-RAlt & 5::goToDesktopAndUpdateDisp(5)
-RAlt & 6::goToDesktopAndUpdateDisp(6)
-RAlt & 7::goToDesktopAndUpdateDisp(7)
+; - Started with LWin & ... but that would often not trigger, or interfere with
+;   the built-in Windows taskbar app shortcuts.
+; - RAlt seemed to be more reliable, but would not work for example if task
+;   manager was active.
+; - Now trying Ctrl Alt N
+^!1::goToDesktopAndUpdateDisp(1)
+^!2::goToDesktopAndUpdateDisp(2)
+^!3::goToDesktopAndUpdateDisp(3)
+^!4::goToDesktopAndUpdateDisp(4)
+^!5::goToDesktopAndUpdateDisp(5)
+^!6::goToDesktopAndUpdateDisp(6)
+^!7::goToDesktopAndUpdateDisp(7)

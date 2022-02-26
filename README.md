@@ -1,7 +1,7 @@
 # vxdesktops.ahk
 
 This a collection of AutoHotkey scripts with which you can switch directly to
-Windows 10 / 11 virtual desktops with `RightAlt-NUM`. Your currently active
+Windows 10 / 11 virtual desktops with `Ctrl+Alt+NUM`. Your currently active
 desktop number will be shown in the systray.
 
 ![vxdesktops numbered systray icon](screenshots/vxdesktops-screenshot-2022-02-23.png)
@@ -25,17 +25,17 @@ ensure that AutoHotkey is set to "On".
 
 You should now see a numbered icon in the systray.
 
-You can switch to desktop 1 to 7 with the hotkey `RightAlt + NUM`.
+You can switch to desktop 1 to 7 with the hotkey `Ctrl+Alt+NUM`.
 
 ## FAQ
-### Why is switching desktops so slow?
+### Why is it so slow when I switch desktops?
 
 Thanks to [the VD.ahk library](https://github.com/FuPeiJiang/VD.ahk), desktops
 are switched using the Windows 10 / 11 API calls, and so this is usually almost
 instantaneous.
 
-However, if you have different wallpaper images on your virtual desktops, it can
-slow down switching significantly.
+However, if you have different wallpaper images on your virtual desktops (a new
+Windows 11 feature IIUC), it can slow down switching significantly.
 
 For best performance, please ensure you have the same wallpaper image on all
 desktops.
