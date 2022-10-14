@@ -46,9 +46,11 @@ displayCurrentDesktop()
 SetTimer displayCurrentDesktop, 200
 
 goToDesktopAndUpdateDisp(desktopNum) {
-    ;; switch to requested desktop
+    ;; first update the current desktop display
+    displayCurrentDesktop()    
+    ;; ... and then switch to requested desktop
     VD.goToDesktopNum(desktopNum)
-    displayCurrentDesktop()
+    ;; (if we switch first, then update, the foreground window on the new display loses focus)
 }
 
 ; - Started with LWin & ... but that would often not trigger, or interfere with
