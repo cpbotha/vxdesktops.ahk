@@ -28,6 +28,10 @@ VD.createUntil(7) ;create until we have at least 7 VD
 global ni
 #include traynum.ahk
 
+; store currently active window on the desktop before we switch away
+; so that we can restore when we get back
+global ActivePerDesktop := {}
+
 global displayedNum := -1
 displayCurrentDesktop() {
     ;; get the current desktop number
@@ -46,11 +50,26 @@ displayCurrentDesktop()
 SetTimer displayCurrentDesktop, 200
 
 goToDesktopAndUpdateDisp(desktopNum) {
-    ;; first update the current desktop display
-    displayCurrentDesktop()    
-    ;; ... and then switch to requested desktop
+    ;; get currently active window
+    ;; see https://www.autohotkey.com/docs/commands/WinActive.htm#Remarks
+    ActiveHwnd := WinExist("A")
+    curDN := VD.getCurrentDesktopNum()
+    ActivePerDesktop[curDN] := ActiveHwnd
+
+    ;;MsgBox, %ActiveHwnd%
+    ;; Switch to requested desktop
     VD.goToDesktopNum(desktopNum)
-    ;; (if we switch first, then update, the foreground window on the new display loses focus)
+
+    ;; update the current desktop display there
+    displayCurrentDesktop()    
+
+    ;; if we have an active window stored for the new desktop, activate it
+    if (ActivePerDesktop.HasKey(desktopNum)) {
+        ;; https://www.autohotkey.com/docs/misc/WinTitle.htm#ahk_id
+        activeWindow := ActivePerDesktop[desktopNum]
+        ;;MsgBox, %bleh%
+        WinActivate, ahk_id %activeWindow%
+    }
 }
 
 ; - Started with LWin & ... but that would often not trigger, or interfere with
