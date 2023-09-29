@@ -1,8 +1,8 @@
 # vxdesktops.ahk
 
 This a collection of AutoHotkey scripts with which you can switch directly to
-Windows 10 / 11 virtual desktops with `Ctrl+Alt+NUM`. Your currently active
-desktop number will be shown in the systray.
+Windows 10 / 11 virtual desktops with `LeftCtrl+Win+NUM` and move active window with `LeftAlt+Win+NUM`.
+Your currently active desktop number will be shown in the systray.
 
 ![vxdesktops numbered systray icon](screenshots/vxdesktops-screenshot-2022-02-23.png)
 
@@ -25,7 +25,9 @@ ensure that AutoHotkey is set to "On".
 
 You should now see a numbered icon in the systray.
 
-You can switch to desktop 1 to 7 with the hotkey `Ctrl+Alt+NUM`.
+You can switch to desktop 1 to 9 with the hotkey `LeftCtrl+Win+NUM`.
+
+You can move the current active window to desktop 1 to 9 with the hotkey `LeftAlt+Win+NUM`.
 
 ## FAQ
 ### Why is it so slow when I switch desktops?
