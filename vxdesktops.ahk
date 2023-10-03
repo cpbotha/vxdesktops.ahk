@@ -22,7 +22,7 @@ SetControlDelay -1
 
 #Include ./VD.ahk/VD.ahk
 ; the VD class is super-global so available everywhere
-VD.createUntil(7) ;create until we have at least 7 VD
+VD.createUntil(3) ;create until we have at least 3 VD
 
 ; make ni (instance of Notify that will be created in traynum.ahk) available everywhere
 global ni
@@ -72,15 +72,44 @@ goToDesktopAndUpdateDisp(desktopNum) {
     }
 }
 
-; - Started with LWin & ... but that would often not trigger, or interfere with
-;   the built-in Windows taskbar app shortcuts.
-; - RAlt seemed to be more reliable, but would not work for example if task
-;   manager was active.
-; - Now trying Ctrl Alt N
-^!1::goToDesktopAndUpdateDisp(1)
-^!2::goToDesktopAndUpdateDisp(2)
-^!3::goToDesktopAndUpdateDisp(3)
-^!4::goToDesktopAndUpdateDisp(4)
-^!5::goToDesktopAndUpdateDisp(5)
-^!6::goToDesktopAndUpdateDisp(6)
-^!7::goToDesktopAndUpdateDisp(7)
+goMoveWindowsToDesktop(desktopNum) {
+    ;; Move Window to specific VD
+    VD.MoveWindowToDesktopNum(%activeWindow%, desktopNum)
+}
+
+<#<^1::goToDesktopAndUpdateDisp(1)
+<#<^2::goToDesktopAndUpdateDisp(2)
+<#<^3::goToDesktopAndUpdateDisp(3)
+<#<^4::goToDesktopAndUpdateDisp(4)
+<#<^5::goToDesktopAndUpdateDisp(5)
+<#<^6::goToDesktopAndUpdateDisp(6)
+<#<^7::goToDesktopAndUpdateDisp(7)
+<#<^8::goToDesktopAndUpdateDisp(8)
+<#<^9::goToDesktopAndUpdateDisp(9)
+<#<^Numpad1::goToDesktopAndUpdateDisp(1)
+<#<^Numpad2::goToDesktopAndUpdateDisp(2)
+<#<^Numpad3::goToDesktopAndUpdateDisp(3)
+<#<^Numpad4::goToDesktopAndUpdateDisp(4)
+<#<^Numpad5::goToDesktopAndUpdateDisp(5)
+<#<^Numpad6::goToDesktopAndUpdateDisp(6)
+<#<^Numpad7::goToDesktopAndUpdateDisp(7)
+<#<^Numpad8::goToDesktopAndUpdateDisp(8)
+<#<^Numpad9::goToDesktopAndUpdateDisp(9)
+<#<!1::goMoveWindowsToDesktop(1)
+<#<!2::goMoveWindowsToDesktop(2)
+<#<!3::goMoveWindowsToDesktop(3)
+<#<!4::goMoveWindowsToDesktop(4)
+<#<!5::goMoveWindowsToDesktop(5)
+<#<!6::goMoveWindowsToDesktop(6)
+<#<!7::goMoveWindowsToDesktop(7)
+<#<!8::goMoveWindowsToDesktop(8)
+<#<!9::goMoveWindowsToDesktop(9)
+<#<!Numpad1::goMoveWindowsToDesktop(1)
+<#<!Numpad2::goMoveWindowsToDesktop(2)
+<#<!Numpad3::goMoveWindowsToDesktop(3)
+<#<!Numpad4::goMoveWindowsToDesktop(4)
+<#<!Numpad5::goMoveWindowsToDesktop(5)
+<#<!Numpad6::goMoveWindowsToDesktop(6)
+<#<!Numpad7::goMoveWindowsToDesktop(7)
+<#<!Numpad8::goMoveWindowsToDesktop(8)
+<#<!Numpad9::goMoveWindowsToDesktop(9)
